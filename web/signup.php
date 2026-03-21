@@ -40,10 +40,9 @@
                     <span class="help-block"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-success btn-block" value="新規登録">
+                    <input type="submit" class="btn-signup-nav btn-block" value="新規登録">
                 </div>
             </form><!--form-->
         </div><!--container-->
-        <span class="typography_typography__Exx2D footer_copyright__WXbFd">&copy; TKD</span>
     </body>
 </html>

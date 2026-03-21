@@ -5,8 +5,7 @@ body {
     font-family: sans-serif;
     min-height: 100vh;
 }
-
-/* === ヘッダー === */
+/* ヘッダー */
 .header {
     display: flex;
     align-items: center;
@@ -14,7 +13,7 @@ body {
     padding: 16px 32px;
     border-bottom: 1px solid #1e293b;
 }
-/* === ロゴ === */
+/* ロゴ */
 .logo-icon {
     width: 28px;
     height: 28px;
@@ -32,14 +31,24 @@ body {
     font-weight: 500;
     color: #f1f5f9;
 }
-/* === ログインボタン === */
+/* ログインボタン */
 .nav-link-custom {
     color: #94a3b8;
     text-decoration: none;
     font-size: 13px;
 }
-/* === 新規登録ボタン === */
+/* 新規登録ボタン */
 .btn-signup-nav {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+}
+/* ログインボタン */
+.btn-login-nav {
     background: #6366f1;
     color: white;
     border: none;

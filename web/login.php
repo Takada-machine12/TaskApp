@@ -37,10 +37,9 @@
                     <span class="help-block"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-success btn-block" value="ログイン">
+                    <input type="submit" class="btn-login-nav btn-block" value="ログイン">
                 </div>
             </form><!--form-->
         </div><!--container-->
-        <span class="typography_typography__Exx2D footer_copyright__WXbFd">&copy; TKD</span>
     </body>
 </html>

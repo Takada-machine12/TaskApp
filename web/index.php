@@ -41,6 +41,5 @@
                 </p>
             </div>
         </div>
-        <span class="typography_typography__Exx2D footer_copyright__WXbFd">&copy; TKD</span>
     </body>
 </html>
