@@ -1,0 +1,91 @@
+/* === 全体 === */
+body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+/* === ヘッダー === */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    border-bottom: 1px solid #1e293b;
+}
+/* === ロゴ === */
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    background: #6366f1;
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+.logo-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #f1f5f9;
+}
+/* === ログインボタン === */
+.nav-link-custom {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+}
+/* === 新規登録ボタン === */
+.btn-signup-nav {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* === ヒーローエリア === */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 32px;
+    gap: 40px;
+}
+.hero-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 32px;
+    gap: 40px;
+}
+
+/* === 新規登録画面 === */
+.btn {
+    width: 100%;
+    background: #6366f1;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* === HOME画面 === */
+.board {
+    display: flex;/*横並びにする*/
+    gap: 16px;
+    padding: 24px;
+}
+.board-column {
+    flex: 1; /*均等にする*/
+}
