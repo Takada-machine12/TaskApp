@@ -22,27 +22,25 @@
         </div>
 
         <!--ヒーローエリア-->
-        <div class="container">
-            <form action="home.php" method="post">
-                <div class="form-group">
-                    <label>ニックネーム</label>
-                    <input type="text" name="nickname" class="form-control" placeholder="ニックネーム" value="" />
-                    <span class="help-block"></span>
-                </div>
-                <div class="form-group">
-                    <label>パスワード</label>
-                    <input type="password" name="password" class="form-control" placeholder="パスワード" value="" />
-                    <span class="help-block"></span>
-                </div>
-                <div class="form-group">
-                    <label>メールアドレス</label>
-                    <input type="text" name="email" class="form-control" placeholder="メールアドレス" value="" />
-                    <span class="help-block"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn-signup-nav btn-block" value="新規登録">
-                </div>
-            </form><!--form-->
-        </div><!--container-->
+        <div class="hero">
+            <div class="login-card-signup">
+                <h5>新規登録</h5>
+
+                <form action="home.php" method="post">
+
+                    <label class="form-label-custom">ニックネーム</label>
+                    <input type="text" name="nickname" class="form-control-custom" placeholder="ニックネーム" value="" />
+
+                    <label class="form-label-custom">パスワード</label>
+                    <input type="password" name="password" class="form-control-custom" placeholder="●●●●●●●●●" value="" />
+
+                    <label class="form-label-custom">メールアドレス</label>
+                    <input type="email" name="email" class="form-control-custom" placeholder="example@mail.com" value="" />
+
+                    <button type="submit" class="btn-signup-nav btn-signup">新規登録</button>
+
+                </form><!--form-->
+            </div><!--login-card-->
+        </div><!--hero-->
     </body>
 </html>
