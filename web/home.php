@@ -52,6 +52,6 @@
                 <input type="text" name="title" class="form-control" placeholder="新規タスク" />
             </div>
 
-        </div><!--display-->
+        </div><!--board-->
     </body>
 </html>
