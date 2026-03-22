@@ -109,6 +109,11 @@ body {
     opacity: 1;
     object-position: center 50%;
 }
+.sortable-ghost {
+    opacity: 0.3;
+    background-color: #f8f9fa;
+    border: 2px dashed #ccc;
+}
 
 /* === ログイン、新規登録画面 === */
 .login-card {
