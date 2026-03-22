@@ -91,6 +91,12 @@ body {
 }
 
 /* === HOME画面 === */
+.board-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #f1f5f9;
+    padding: 8px 0 8px 0;
+}
 .board {
     display: flex;/*横並びにする*/
     gap: 16px;
@@ -113,6 +119,25 @@ body {
     opacity: 0.3;
     background-color: #f8f9fa;
     border: 2px dashed #ccc;
+}
+/*タスクアイテム*/
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/*ドラッグハンドル*/
+.drag-handle {
+    display: flex;
+    align-items: center;
+    color: #64748b;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+.board-column label {
+    padding: 20px;
+    display: block;
+    margin-bottom: 4px;
 }
 
 /* === ログイン、新規登録画面 === */

@@ -28,7 +28,7 @@
         <!--ヒーローエリア-->
         <div class="container">
             <img src="./image/new york.jpeg" alt="様々な建物が横一列に並んでいる" class="fit-picture" referrerpolicy="same-origin" />
-            <h5>タスク管理</h5>
+            <h5 class="board-title">タスク管理</h5>
             <div class="board">
                 <div class="board-column">
                     <label>本日のタスク</label>
