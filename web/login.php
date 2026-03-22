@@ -22,23 +22,25 @@
         </div>
 
         <!--ヒーローエリア-->
-        <div class="hero">
-            <div class="login-card">
-                <h5>ログイン</h5>
-                <p>アカウントにサインインする</p>
+        <div class="container">
+            <div class="hero">
+                <div class="login-card">
+                    <h5>ログイン</h5>
+                    <p>アカウントにサインインする</p>
 
-                <form action="home.php" method="post">
+                    <form action="home.php" method="post">
 
-                    <label class="form-label-custom">メールアドレス</label>
-                    <input type="email" name="email" class="form-control-custom" placeholder="example@mail.com" value="" />
+                        <label class="form-label-custom">メールアドレス</label>
+                        <input type="email" name="email" class="form-control-custom" placeholder="example@mail.com" value="" />
 
-                    <label class="form-label-custom">パスワード</label>
-                    <input type="password" name="password" class="form-control-custom" placeholder="●●●●●●●●●" value="" />
+                        <label class="form-label-custom">パスワード</label>
+                        <input type="password" name="password" class="form-control-custom" placeholder="●●●●●●●●●" value="" />
 
-                    <input type="checkbox" name="auto_login" class="form-check-input" id="autoLogin" value="1">ログイン状態を保持する
-                    <button type="submit" class="btn-login-nav btn-login">ログイン</button>
-                </form><!--form-->
-            </div>
+                        <input type="checkbox" name="auto_login" class="form-check-input" id="autoLogin" value="1">ログイン状態を保持する
+                        <button type="submit" class="btn-login-nav btn-login">ログイン</button>
+                    </form><!--form-->
+                </div><!--login-card-->
+            </div><!--hero-->
         </div><!--container-->
     </body>
 </html>

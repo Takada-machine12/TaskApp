@@ -25,33 +25,36 @@
         </div>
 
         <!--ヒーローエリア-->
-        <h5>タスク</h5>
-        <div class="board">
-            <div class="board-column">
-                <label>本日のタスク</label>
-                <input type="text" name="title" class="form-control" placeholder="新規タスク" />
-            </div>
+        <div class="container">
+            <img src="./image/new york.jpeg" alt="様々な建物が横一列に並んでいる" class="fit-picture" referrerpolicy="same-origin" />
+            <h5>タスク管理</h5>
+            <div class="board">
+                <div class="board-column">
+                    <label>本日のタスク</label>
+                    <input type="text" name="title" class="form-control" placeholder="新規タスク" />
+                </div><!--board-column-->
 
-            <div class="board-column">
-                <label>進行中</label>
-                <input type="text" name="title" class="form-control" placeholder="新規タスク" />
-            </div>
+                <div class="board-column">
+                    <label>進行中</label>
+                    <input type="text" name="title" class="form-control" placeholder="新規タスク" />
+                </div><!--board-column-->
 
-            <div class="board-column">
-                <label>待機中</label>
-                <input type="text" name="title" class="form-control" placeholder="新規タスク" />
-            </div>
+                <div class="board-column">
+                    <label>待機中</label>
+                    <input type="text" name="title" class="form-control" placeholder="新規タスク" />
+                </div><!--board-column-->
 
-            <div class="board-column">
-                <label>完了</label>
-                <input type="text" name="title" class="form-control" placeholder="新規タスク" />
-            </div>
+                <div class="board-column">
+                    <label>完了</label>
+                    <input type="text" name="title" class="form-control" placeholder="新規タスク" />
+                </div><!--board-column-->
 
-            <div class="board-column">
-                <label>明日のタスク</label>
-                <input type="text" name="title" class="form-control" placeholder="新規タスク" />
-            </div>
+                <div class="board-column">
+                    <label>明日のタスク</label>
+                    <input type="text" name="title" class="form-control" placeholder="新規タスク" />
+                </div><!--board-column-->
 
-        </div><!--board-->
+            </div><!--board-->
+        </div><!--container-->
     </body>
 </html>

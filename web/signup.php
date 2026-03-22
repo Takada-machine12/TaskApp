@@ -22,25 +22,27 @@
         </div>
 
         <!--ヒーローエリア-->
-        <div class="hero">
-            <div class="login-card-signup">
-                <h5>新規登録</h5>
+        <div class="container">
+            <div class="hero">
+                <div class="login-card-signup">
+                    <h5>新規登録</h5>
 
-                <form action="home.php" method="post">
+                    <form action="home.php" method="post">
 
-                    <label class="form-label-custom">ニックネーム</label>
-                    <input type="text" name="nickname" class="form-control-custom" placeholder="ニックネーム" value="" />
+                        <label class="form-label-custom">ニックネーム</label>
+                        <input type="text" name="nickname" class="form-control-custom" placeholder="ニックネーム" value="" />
 
-                    <label class="form-label-custom">パスワード</label>
-                    <input type="password" name="password" class="form-control-custom" placeholder="●●●●●●●●●" value="" />
+                        <label class="form-label-custom">パスワード</label>
+                        <input type="password" name="password" class="form-control-custom" placeholder="●●●●●●●●●" value="" />
 
-                    <label class="form-label-custom">メールアドレス</label>
-                    <input type="email" name="email" class="form-control-custom" placeholder="example@mail.com" value="" />
+                        <label class="form-label-custom">メールアドレス</label>
+                        <input type="email" name="email" class="form-control-custom" placeholder="example@mail.com" value="" />
 
-                    <button type="submit" class="btn-signup-nav btn-signup">新規登録</button>
+                        <button type="submit" class="btn-signup-nav btn-signup">新規登録</button>
 
-                </form><!--form-->
-            </div><!--login-card-->
-        </div><!--hero-->
+                    </form><!--form-->
+                </div><!--login-card-->
+            </div><!--hero-->
+        </div><!--container-->
     </body>
 </html>

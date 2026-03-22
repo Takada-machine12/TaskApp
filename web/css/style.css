@@ -99,6 +99,16 @@ body {
 .board-column {
     flex: 1; /*均等にする*/
 }
+.fit-picture {
+    display: block;
+    object-fit: cover;
+    border-radius: 0px;
+    width: 100%;
+    height: 20vh;
+    max-height: 200px;
+    opacity: 1;
+    object-position: center 50%;
+}
 
 /* === ログイン、新規登録画面 === */
 .login-card {

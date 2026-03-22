@@ -26,20 +26,22 @@
         </div>
 
         <!--ヒーローエリア-->
-        <div class="hero">
-            <!--アプリの説明-->
-            <div>
-                <div class="hero-tag">シンプルなタスク管理アプリ</div>
-                <h1 class="hero-title">
-                    今日のタスクを、<br>
-                    <span>スマートに管理</span>しよう。
-                </h1>
-                <p class="hero-desc">
-                    ドラッグ&ドロップで直感的にタスクを管理。<br>
-                    本日のタスク・進行中・待機中・完了・明日のタスクのステータスで、<br>
-                    あなたの仕事をシンプルに整理します。
-                </p>
-            </div>
-        </div>
+        <div class="container">
+            <div class="hero">
+                <!--アプリの説明-->
+                <div>
+                    <div class="hero-tag">シンプルなタスク管理アプリ</div>
+                    <h1 class="hero-title">
+                        今日のタスクを、<br>
+                        <span>スマートに管理</span>しよう。
+                    </h1>
+                    <p class="hero-desc">
+                        ドラッグ&ドロップで直感的にタスクを管理。<br>
+                        本日のタスク・進行中・待機中・完了・明日のタスクのステータスで、<br>
+                        あなたの仕事をシンプルに整理します。
+                    </p>
+                </div>
+            </div><!--hero-->
+        </div><!--container-->
     </body>
 </html>
