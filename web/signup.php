@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     }
 
     //[メールアドレス]入力チェック
-    if ($email = '') {
+    if ($email == '') {
         $error['email'] = 'メールアドレスを入力してください。';
     } elseif (mb_strlen($email) > 200) {
         $error['email'] = 'メールアドレスは200文字以内で入力してください。';
