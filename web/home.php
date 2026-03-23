@@ -1,9 +1,13 @@
+<?php
+require_once('config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TaskApp</title>
+        <title>HOME | <?php echo SERVER_NAME; ?></title>
         <!--Bootstrap-->
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <!--自作CSS-->
@@ -17,7 +21,7 @@
         <div class="header">
             <div class="d-flex align-items-center gap-2">
                 <div class="logo-icon">T</div>
-                <span class="logo-text">TaskApp</span>
+                <span class="logo-text"><?php echo SERVICE_SHORT_NAME; ?></span>
             </div>
             <div class="d-flex align-items-center gap-4">
                 <a href="index.php" class="nav-link-custom">ログアウト</a>

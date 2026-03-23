@@ -6,4 +6,5 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'taskmanager');
+define('ADMIN_MAIL_ADDRESS', 'y.takada@eclat-assist.jp');
 ?>
