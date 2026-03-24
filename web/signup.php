@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             unset($pdo); //エラー時接続を切断
         } else {
             //データベースに新規登録
-            $sql = "INSERT INTO user (nickname, password, email, created_at, updated_at)
+            $sql = "INSERT INTO users (nickname, password, email, created_at, updated_at)
                     VALUES (:nickname, :password, :email, now(), now())";
             $stmt = $pdo->prepare($sql);
             $stmt->execute(array(":nickname" => $nickname, ":email" => $email, ":password" => $password));
@@ -137,7 +137,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
                             <span class="help-block"><?php if (!empty($error['email'])) echo xss($error['email']); ?></span>
                         </div>
 
-                        <button type="submit" class="btn-signup-nav btn-signup">新規登録</button>
+                        <div class="form-group">
+                            <button type="submit" class="btn-signup-nav btn-signup">新規登録</button>
+                        </div>
                         <input type="hidden" name="token" value="<?php echo xss($_SESSION['sstoken']); ?>">
 
                     </form><!--form-->

@@ -17,7 +17,7 @@ function connectDb() {
 //メールアドレスの存在チェック
 function checkEmail($email, $pdo) {
     $sql = "SELECT * 
-            FROM user 
+            FROM users 
             WHERE email = :email 
             LIMIT 1";
     $stmt = $pdo->prepare($sql);
@@ -30,7 +30,7 @@ function checkEmail($email, $pdo) {
 //メールアドレスとパスワードからuserを検索する。
 function getUser($email, $password, $pdo) {
     $sql = "SELECT * 
-            FROM user 
+            FROM users
             WHERE email = :email AND BINARY password = :password 
             LIMIT 1";
     $stmt = $pdo->prepare($sql);
@@ -65,5 +65,46 @@ function checkToken() {
         
         exit;
     }
+}
+
+//オートログイン セットアップ
+function setup_auto_login($user_id, $pdo) {
+    //ランダムなキーを生成(トークンと同じ)
+    $c_key = sha1(uniqid(mt_rand(), true));
+
+    //有効期限を1年後に設定
+    $expire = date('Y-m-d H:i:s', time()+3600*24*365);
+
+    //DBに保存
+    $sql = "INSERT INTO auto_login (user_id, c_key, expire, created_at, updated_at)
+            VALUES (:user_id, :c_key, :expire, now(), now())";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(":user_id" => $user_id, ":c_key" => $c_key, ":expire" => $expire));
+
+    //ブラウザのCookieにも同じキーを保存
+    setcookie('TASKAPP', $c_key, time()+3600*24*365, '/develop/TaskApp/web/');
+}
+
+//オートログイン デリート
+function delete_auto_login($c_key) {
+    //DBから削除
+    $pdo = connectDb();
+    $sql = "DELETE FROM auto_login WHERE c_key = :c_key";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(':c_key' => $c_key));
+    unset($pdo);
+
+    //Cookieを削除(有効期限を過去にすることで削除扱いになる。)
+    setcookie('TASKAPP', '', time()-86400, '/develop/TaskApp/web/');
+}
+
+//ユーザーIDからuserを検索
+function getUserbyUserId($user_id, $pdo) {
+    $sql = "SELECT * FROM users WHERE id = :user_id LIMIT 1";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(":user_id" => $user_id));
+    $user = $stmt->fetch();
+
+    return $user ? $user : false;
 }
 ?>
