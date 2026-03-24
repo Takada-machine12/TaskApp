@@ -22,9 +22,9 @@ function checkEmail($email, $pdo) {
             LIMIT 1";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(array(":email" => $email));
-    $fitst_user = $stmt->fetch();
+    $first_user = $stmt->fetch();
 
-    return $fitst_user ? true : false;
+    return $first_user ? true : false;
 }
 
 //メールアドレスとパスワードからuserを検索する。
