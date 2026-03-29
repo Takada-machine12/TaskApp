@@ -57,7 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             $sql = "INSERT INTO users (nickname, password, email, created_at, updated_at)
                     VALUES (:nickname, :password, :email, now(), now())";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(array(":nickname" => $nickname, ":email" => $email, ":password" => $password));
+            //パスワードをハッシュ化
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $stmt->execute(array(":nickname" => $nickname, ":email" => $email, ":password" => $hashed_password));
 
             //新規登録者を管理者にメールで通知する。
             mb_language('japanese');

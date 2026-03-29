@@ -31,13 +31,18 @@ function checkEmail($email, $pdo) {
 function getUser($email, $password, $pdo) {
     $sql = "SELECT * 
             FROM users
-            WHERE email = :email AND BINARY password = :password 
+            WHERE email = :email
             LIMIT 1";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array(":email" => $email, ":password" => $password));
+    $stmt->execute(array(":email" => $email));
     $login_user = $stmt->fetch();
 
-    return $login_user ? $login_user : false;
+    //password_verify()でハッシュと照合
+    if ($login_user && password_verify($password, $login_user['password'])) {
+        return $login_user;
+    }
+
+    return false;
 }
 
 //XSS対策
