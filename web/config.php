@@ -6,7 +6,7 @@ define('DB_HOST', 'mysql3112.db.sakura.ne.jp');
 define('DB_USER', 'goldcivet74_sample01');
 define('DB_PASSWORD', 'takada1278');
 define('DB_NAME', 'goldcivet74_sample01');
-define('ADMIN_MAIL_ADDRESS', 'takada311@gmail.com');
+define('ADMIN_MAIL_ADDRESS', 'y.takada@eclat-assist.jp');
 
 //ローカル環境
 //define('SITE_URL', 'http://localhost/develop/TaskApp/web/');
