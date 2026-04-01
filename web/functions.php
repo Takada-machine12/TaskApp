@@ -100,7 +100,7 @@ function delete_auto_login($c_key) {
     unset($pdo);
 
     //Cookieを削除(有効期限を過去にすることで削除扱いになる。)
-    setcookie('TASKAPP', '', time()-86400, '/develop/TaskApp/web/');
+    setcookie('TASKAPP', '', time()-86400, '/');
 }
 
 //ユーザーIDからuserを検索
