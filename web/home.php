@@ -391,10 +391,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
                     animation: 150,
                     handle: '.drag-handle', //アイコンを掴んだ時だけドラッグ可能
                     ghostClass: 'sortable-ghost',
-                    filter: '.task-item:not([data-id])', //data-idがない要素（空の入力欄）はドラッグ不可
                     onEnd: function(evt) {
                         //移動したtask-itemのIDを取得
                         const task_id = $(evt.item).data('id');
+                        // ★ data-idがない場合（空の入力欄）は処理をスキップ
+                        if (!task_id) {
+                            return;
+                        }
                         //移動先のカラムのステータスを取得
                         const new_status = $(evt.item).closest('.board-column').data('status');
 
