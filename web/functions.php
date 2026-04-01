@@ -87,7 +87,7 @@ function setup_auto_login($user_id, $pdo) {
     $stmt->execute(array(":user_id" => $user_id, ":c_key" => $c_key, ":expire" => $expire));
 
     //ブラウザのCookieにも同じキーを保存
-    setcookie('TASKAPP', $c_key, time()+3600*24*365, '/develop/TaskApp/web/');
+    setcookie('TASKAPP', $c_key, time()+3600*24*365, '/');
 }
 
 //オートログイン デリート
