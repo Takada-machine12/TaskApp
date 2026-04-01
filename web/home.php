@@ -391,6 +391,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
                     animation: 150,
                     handle: '.drag-handle', //アイコンを掴んだ時だけドラッグ可能
                     ghostClass: 'sortable-ghost',
+                    // ★ドラッグ中に移動を許可するか判定する
+                    onMove: function(evt) {
+                        // data-idがない要素（空の入力欄）は移動不可
+                        if (!$(evt.dragged).data('id')) {
+                            return false; // falseを返すと移動がキャンセルされる
+                        }
+                    },
                     onEnd: function(evt) {
                         //移動したtask-itemのIDを取得
                         const task_id = $(evt.item).data('id');
