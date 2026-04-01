@@ -16,7 +16,7 @@ $_SESSION = array(); //セッション変数を空にする。
 
 //Cookieの無効化
 if (isset($_COOKIE[session_name()])) {
-    setcookie(session_name(), '', time()-86400, '/develop/TaskApp/web/');
+    setcookie(session_name(), '', time()-86400, '/');
 }
 session_destroy();  //セッション自体を破棄する。
 
