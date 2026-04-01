@@ -1,5 +1,13 @@
 <?php
 require_once('config.php');
+require_once('functions.php');
+session_start();
+
+//ログイン済みの場合はhome.phpにリダイレクト
+if (isset($_SESSION['USER'])) {
+    header('Location:'.SITE_URL.'home.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
